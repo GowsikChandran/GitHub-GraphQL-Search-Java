@@ -29,7 +29,7 @@ public class ApolloModule {
     private static final String BASE_URL = "https://api.github.com/graphql";
 
     //access token
-    private static final String ACCESS_TOKEN = "your access token";
+    private static final String ACCESS_TOKEN = "your token";
 
     /**
      * This method constructs and returns the Auth interceptor
