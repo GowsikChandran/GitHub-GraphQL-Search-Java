@@ -1,0 +1,23 @@
+query SearchRepoQuery($query: String!,$limit: Int!,$afterCursor: String){
+  search(query:$query, type: REPOSITORY, first: $limit, after:$afterCursor) {
+    repositoryCount
+    edges {
+      node {
+        ... on Repository {
+          id
+          name
+          description
+          forkCount
+          owner{
+            avatarUrl
+          }
+        }
+      }
+      cursor
+    }
+    pageInfo {
+        endCursor
+        hasNextPage
+      }
+  }
+}
